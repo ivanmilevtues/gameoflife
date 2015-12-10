@@ -51,7 +51,7 @@ int main(){
 	return 0;
 }
 void strcp(int nextgen[800][800],int currentgen[800][800]){
-	printf("STRCP\n");
+	// printf("STRCP\n");
 	register int i=0,j=0;
 	for(i = 0; i < 800; i++){
 		for(j = 0;j < 800;j++){
@@ -61,32 +61,32 @@ void strcp(int nextgen[800][800],int currentgen[800][800]){
 }
 
 void generator(int nextgen[800][800],int currentgen[800][800]){
-	printf("GENERATOR\n");
+	// printf("GENERATOR\n");
 	register int i,j;
 	int count_neighbor,cur_x,cur_y;
-	for(i = 0; i < 800; i++){
-		for(j = 0;j < 800;j++){
+	for(i = 0; i < 797; i++){
+		for(j = 0;j < 797;j++){
 			count_neighbor = 0;
 			if(currentgen[i][j] == 1){
 				for(cur_x = i - 1; cur_x <= i + 1 ;cur_x++){
 					for (cur_y = j - 1;cur_y <= j + 1;cur_y++){
-						if (currentgen[cur_x][cur_y] == 1){
-							count_neighbor++;
+						if (currentgen[cur_x][cur_y] == 1 && (cur_x != i || cur_y!= j)){
+								count_neighbor++;
 						}
 					}
 				}
 				if(count_neighbor < 2){
-					nextgen[i][j] == 0;
+					nextgen[i][j] = 0;
 				}else if (count_neighbor >= 2 && count_neighbor <= 3){
 					nextgen[i][j] = 1;
 				}else{
-					nextgen[i][j] == 0;
+					nextgen[i][j] = 0;
 				}
 			}else{
 				for(cur_x = i - 1; cur_x <= i + 1 ;cur_x++){
 					for (cur_y = j - 1;cur_y <= j + 1;cur_y++){
-						if (currentgen[cur_x][cur_y] == 1){
-							count_neighbor++;
+						if (currentgen[cur_x][cur_y] == 1 &&(cur_x != i || cur_y!= j)){
+								count_neighbor++;
 						}
 					}
 				}
@@ -100,7 +100,7 @@ void generator(int nextgen[800][800],int currentgen[800][800]){
 }
 
 void draw(int nextgen[800][800]){
-	printf("DRAW\n");
+	// printf("DRAW\n");
 	sf::RectangleShape pixel(sf::Vector2f(1,1));
 	register int i,j;
 	for(i = 0;i < 800;i++){
@@ -114,7 +114,7 @@ void draw(int nextgen[800][800]){
 }
 
 int check(int nextgen[800][800]){
-	printf("CHECK\n");
+	// printf("CHECK\n");
 	register int i,j;
 	for(i = 0;i < 800;i++){
 		for (j = 0; j < 800; j++){
