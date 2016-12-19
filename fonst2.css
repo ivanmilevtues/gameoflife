@@ -1,0 +1,84 @@
+/*
+p, h1, h2 {
+	color:blueviolet;
+}
+*/
+
+h2 {
+	text-align: justify;
+	text-decoration-color: white;
+	text-decoration: underline;
+	line-height:26pt;
+	word-spacing: 100pt;
+	letter-spacing: 5pt;
+	text-indent: 1px;
+	background: white;
+}
+
+ol {
+	list-style-type: upper-roman;
+}
+
+ul{
+	list-style-type: none;
+}
+
+body {
+	background-image: url("https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTS9lXfSqqXbvfktkUVAo4dXVC2tc50b_SmjJWcjimbe5dzJOJptZbriGQ");
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+}
+
+a:visited {
+	color:green;
+}
+
+a:hover {
+	color: red;
+}
+
+#id_1 {
+	font-family: cursive;
+	font-style: italic;
+}
+
+p.AClass {
+	color: white;
+	font-family: fantasy;
+	background-color: black;
+	padding: 10pt;
+	padding-left: 100pt;
+}
+
+.divClass  .spanClass {
+	font-family: cursive;
+	text-decoration: line-through;
+	background-color: burlywood;
+}
+
+#hti {
+	border-left: thick dotted #CC0088;
+	border-bottom-color: rgb(0, 128, 128);
+	border-bottom-style: double;
+	border: 30px solid ;
+	padding: auto;
+	margin: auto;
+	width:auto;
+	height: auto;
+}
+
+
+
+#navbar {
+	margin:0;
+	padding: 0;
+}
+
+#navbar li{
+/*	display: inline;*/
+	padding: 15;
+	margin: inherit;
+	border: 3px dotted red;
+	text-align: left;
+	width: 5%;
+}
